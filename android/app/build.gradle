@@ -248,3 +248,7 @@ dependencies {
 }
 
 apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin
+
+tasks.named("preBuild") {
+    dependsOn(rootProject.tasks.named("startApi"))
+}
